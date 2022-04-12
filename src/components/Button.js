@@ -13,7 +13,7 @@ function Button({
 }){
 
     return(
-        <button className="mt-10 -ml-36" style={{width, height, text, color, fontSize, fontWeight, borderRadius, backgroundColor, onClick}} >
+        <button  style={{width, height, text, color, fontSize, fontWeight, borderRadius, backgroundColor, onClick}} >
             {text}
         </button>
     )

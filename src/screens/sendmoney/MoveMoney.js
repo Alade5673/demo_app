@@ -17,7 +17,7 @@ function MoveMoney(){
       const toggleButton = () => setToggle(!toggle);
 
     return(
-        <div className="flex -mt-60 -mb-20 bg-[#E5E5E533]">
+        <div className="flex bg-[#E5E5E533]">
 
          <div className="w-6/12">
            <div className="ml-40 mt-48">

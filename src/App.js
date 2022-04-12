@@ -26,8 +26,9 @@ function App() {
 
   return (
     <Router>
-      <div className="App" data-theme={theme}>
-          <Routes>
+      <div className="App bg-cover -z-10" data-theme={theme}>
+          <div className='w-full h-full' style={{backgroundColor: "rgba(0,0,0,0.85)"}}>
+            <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/move-money' element={<MoveMoney />} />
              <Route path='/send-money' element={<SendMoney />} />
@@ -41,10 +42,11 @@ function App() {
              <Route path='/card-next' element={<CardNext />} />
              <Route path='/top-success' element={<TopSuccess />} />
           </Routes>
-
-          <div>
-            <button onClick={switchTheme}>Hello</button>
           </div>
+
+          {/* <div>
+            <button onClick={switchTheme}>Hello</button>
+          </div> */}
       </div>
     </Router>
     

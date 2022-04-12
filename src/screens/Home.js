@@ -21,13 +21,14 @@ function Home() {
 
   return (
     <div>
-      <div className="w-full flex justify-center -mt-60">
-      <div className='w-6/12 pl-36'>
-        <p className="text-3xl font-bold mt-40 text-left">
+      <div className="w-full flex justify-center">
+      <div className='w-6/12 flex items-center'>
+        <div className="w-[80%] flex flex-col justify-center items-center text-center h-[80%] my-auto  bg-white mx-auto">    
+        <p className="text-3xl font-bold">
           Get Started with Money App
-        </p>
+        </p> 
 
-        <p className="text-sm font-normal mt-4 text-left">
+        <p className="text-sm font-normal mt-4 mx-20">
           Take a tour and see how we have made various financials activities smooth and faster.
         </p>
 
@@ -41,7 +42,7 @@ function Home() {
         />
 
         <p className="text-sm font-normal mt-5 text-left">
-          View demo as an
+          View demo as an:
         </p>
 
         {/* <div
@@ -78,9 +79,9 @@ function Home() {
         <div className="flex mt-10 place-items--center">
 
           {/* <div className={[toggle ? "border border-sky-500" : "border-2 border-[#E5E5E5]"]} onClick={toggleButton} > */}
-          <div className="border border-sky-500 items--center ml-24"  onClick={toggleButton} >
+          <div className="border border-sky-500 items-center"  onClick={toggleButton} >
             <Option
-              width="200px"
+              width="170px"
               height="100px"
               text="Account Holder"
               color="#0DB9E9"
@@ -114,9 +115,9 @@ function Home() {
         </div>
 
         {/* <div onClick={() => {toggle == true ? navigate('/move-money'): navigate('/top-up')}} className="pl-5"> */}
-        <div onClick={() => navigate('/move-money')} className="ml-20">
+        <div onClick={() => navigate('/move-money')} className="mt-10 mx-auto">
           <Button
-            width="420px"
+            width="300px"
             height="50px"
             text="Launch Demo"
             color="#FFFFFF"
@@ -130,9 +131,10 @@ function Home() {
         </div>
         
       </div>
+      </div>
 
       <div className='bg-imgBkg w-6/12 ml-2'>
-        <img src={test} />
+        <img src={test} className="h-[700px]"/>
       </div>
 
       <div>
