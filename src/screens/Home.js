@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import '../App.css';
 import Button from '../components/Button';
-import test from '../assets/move-money.png'
+import test from '../assets/empty.png'
 import colored_radio from '../assets/colored_radio.png'
 import uncolored_radio from '../assets/uncolored_radio.png'
 import Option from '../components/Option';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Steps from "../components/Steps"
 
 function Home() {
+  let location = useLocation();
 
  const navigate = useNavigate();
 
@@ -20,10 +21,10 @@ function Home() {
  const noop = () => {navigate('/send-money')};
 
   return (
-    <div>
+    <div onClick={()=>console.log("hello")}>
       <div className="w-full flex justify-center">
       <div className='w-6/12 flex items-center'>
-        <div className="w-[80%] flex flex-col justify-center items-center text-center h-[80%] my-auto  bg-white mx-auto">    
+        <div className="w-[80%] flex flex-col justify-center items-center text-center h-[80%] my-auto rounded-lg bg-white mx-auto">    
         <p className="text-3xl font-bold">
           Get Started with Money App
         </p> 
@@ -133,8 +134,8 @@ function Home() {
       </div>
       </div>
 
-      <div className='bg-imgBkg w-6/12 ml-2'>
-        <img src={test} className="h-[700px]"/>
+      <div className='w-6/12 flex flex-col justify-center items-center rounded-md'>
+        <img src={test} className="h-[700px] p-[65px] rounded-md"/>
       </div>
 
       <div>

@@ -17,10 +17,9 @@ function MoveMoney(){
       const toggleButton = () => setToggle(!toggle);
 
     return(
-        <div className="flex bg-[#E5E5E533]">
-
+        <div className="w-full flex justify-center">
          <div className="w-6/12">
-           <div className="ml-40 mt-48">
+           <div className="mt-24">
            <Steps
               width="200px"
               height="160px"
@@ -88,7 +87,7 @@ function MoveMoney(){
  
          </div> : null }
 
-        <div className="flex ml-40 -mt-20 absolute bottom-8 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex ml-40 -mt-20 absolute bottom-20 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
 
           <p className="customize">
                     CUSTOMIZE
@@ -107,9 +106,9 @@ function MoveMoney(){
         
          </div>
            
-           <div className="bg-[#ffffff] p-10 mt-20 mb-20 -ml-10 h-[610px] w-[300px] relative">
+           <div className="bg-[#ffffff] p-5 mt-20 -ml-10 h-[530px] w-[270px] relative flex flex-col justify-right items-right rounded-md">
               <div className="flex space-x-16">
-                <img src={arrow} className="h-[15px]"/>
+                <img src={arrow} className="h-[13px]"/>
 
                 <p className="move">
                     Move Money
@@ -124,7 +123,7 @@ function MoveMoney(){
                   $0
               </p>
 
-              <div className="flex space-x-3 ml-[130px] mt-16">
+              <div className="flex space-x-3 mt-16">
                   <Button
                     width="230px"
                     height="40px"
@@ -150,7 +149,7 @@ function MoveMoney(){
                 />
               </div>
             
-              <div className="-ml-5">
+              <div className="">
                 <img src={keypad} />
               </div>
 

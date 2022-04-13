@@ -9,8 +9,8 @@
   /* color: var(--text-primary); */
   /* background-color: var(--background); */
   background-color: transparent;
-  background-image: url("assets/bg.jpeg");
-  z-index: -1;
+  background-image: url("assets/bg4.png");
+  /* z-index: -1; */
   font-size: large;
   font-weight: bold;
   /* padding: 20px; */
@@ -24,6 +24,9 @@
 
 }
 
+.main-move {
+  /* background-image: url("assets/bg4.png"); */
+}
 /* button {
   color: var(--text-primary);
   background-color: var(--background);
@@ -160,7 +163,7 @@ li {
 .zero {
   font-size: 50px;
   font-weight: bold;
-  padding-top: 100px;
+  padding-top: 80px;
   color: #E0E0E0;
 }
 

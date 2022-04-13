@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './screens/Home';
 import SendMoney from './screens/sendmoney/SendMoney';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
 import MoveMoney from './screens/sendmoney/MoveMoney';
 import Send from './screens/sendmoney/Send';
 import SendNext from './screens/sendmoney/SendNext';
@@ -12,38 +12,39 @@ import Fund from './screens/topup/Fund';
 import Card from './screens/topup/Card';
 import CardNext from './screens/topup/CardNext';
 import TopSuccess from './screens/topup/TopSuccess';
-import useLocalStorage from 'use-local-storage'
 
 function App() {
 
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  let location 
 
-    const switchTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-    }
+console.log(window.location)
+
 
   return (
     <Router>
-      <div className="App bg-cover -z-10" data-theme={theme}>
-          <div className='w-full h-full' style={{backgroundColor: "rgba(0,0,0,0.85)"}}>
-            <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/move-money' element={<MoveMoney />} />
-             <Route path='/send-money' element={<SendMoney />} />
-             <Route path='/send' element={<Send />} />
-             <Route path='/send-next' element={<SendNext />} />
-             <Route path='/success' element={<Success />} />
-             <Route path='/top-up' element={<TopUp />} />
-             <Route path='/top-next' element={<TopNext />} />
-             <Route path='/fund' element={<Fund />} />
-             <Route path='/card' element={<Card />} />
-             <Route path='/card-next' element={<CardNext />} />
-             <Route path='/top-success' element={<TopSuccess />} />
+      {/* {location = useLocation()} */}
+      <div className="App bg-cover relative -z-20 h-screen">
+        <div className={`${window.location.pathname === "/" ? "hidden" : "fixed"}
+        w-[80%] h-[80%] -z-10 top-[10%] left-[10%] mx-auto bg-gradient-to-r from-violet-500 to-fuchsia-500`}></div>
+          <div div className='w-full h-full relative z-20' style={{backgroundColor: "rgba(0,0,0,0.7)"}}>
+           
+              <Routes>
+                  <Route exact path='/' element={<Home />} />
+                  <Route path='/move-money' element={<MoveMoney />} />
+                  <Route path='/send-money' element={<SendMoney />} />
+                  <Route path='/send' element={<Send />} />
+                  <Route path='/send-next' element={<SendNext />} />
+                  <Route path='/success' element={<Success />} />
+                  <Route path='/top-up' element={<TopUp />} />
+                  <Route path='/top-next' element={<TopNext />} />
+                  <Route path='/fund' element={<Fund />} />
+                  <Route path='/card' element={<Card />} />
+                  <Route path='/card-next' element={<CardNext />} />
+                  <Route path='/top-success' element={<TopSuccess />} />
           </Routes>
+          
           </div>
-
+        
           {/* <div>
             <button onClick={switchTheme}>Hello</button>
           </div> */}
