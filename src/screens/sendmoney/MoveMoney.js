@@ -15,6 +15,7 @@ function MoveMoney(){
 
       const [toggle, setToggle] = useState(false);
       const toggleButton = () => setToggle(!toggle);
+      const [color, setColor] = useState("")
 
     return(
         <div className="w-full flex justify-center">
@@ -93,7 +94,7 @@ function MoveMoney(){
                     CUSTOMIZE
             </p>
 
-           <Color/>
+           <Color setColor={setColor} />
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">
@@ -115,11 +116,11 @@ function MoveMoney(){
                   </p>
               </div>
 
-              <p className="bal">
+              <p className="bal" style={{color: `${color ? color : "#C5C5C5"}`}}>
                   Account balance : $6,790
               </p>
 
-              <p className="zero" onClick={() => {navigate('/send-money')}}>
+              <p className="zero" style={{color: `${color ? color : "#E0E0E0"}`}} onClick={() => {navigate('/send-money')}}>
                   $0
               </p>
 
@@ -132,7 +133,7 @@ function MoveMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={"#E8E8E8"}
+                    backgroundColor={color ? color : "#E8E8E8"}
 
                 />
 
@@ -144,7 +145,7 @@ function MoveMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={"#E8E8E8"}
+                    backgroundColor={color ? color : "#E8E8E8"}
 
                 />
               </div>

@@ -13,6 +13,7 @@ function SendMoney(){
 
   const [toggle, setToggle] = useState(false);
   const toggleButton = () => setToggle(!toggle);
+  const [color, setColor] = useState("")
 
    const navigate = useNavigate();
 
@@ -94,7 +95,7 @@ function SendMoney(){
                     CUSTOMIZE
             </p>
 
-           <Color/>
+           <Color setColor={setColor}/>
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">
@@ -118,11 +119,11 @@ function SendMoney(){
                   </p>
               </div>
 
-              <p className="bal">
+              <p className="bal" style={{color: `${color ? color : "#C5C5C5"}`}}>
                   Account balance : $6,790
               </p>
 
-              <p className="amount">
+              <p className="amount" style={{color: `${color ? color : "#C5C5C5"}`}}>
                   $127.34
               </p>
 
@@ -135,7 +136,7 @@ function SendMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={"#989898"}
+                    backgroundColor={color ? color : "#989898"}
 
                 />
 
@@ -147,7 +148,7 @@ function SendMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={"#989898"}
+                    backgroundColor={color ? color : "#989898"}
 
                 />
               </div>
