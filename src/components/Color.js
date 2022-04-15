@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
 import color1 from '../assets/color-one.png'
 import color2 from '../assets/color-two.png'
 import color3 from '../assets/color-three.png'
 import color4 from '../assets/color-four.png'
 import color5 from '../assets/color-5.png'
 import color6 from '../assets/color-6.png'
+import { AppContext } from "../App";
 
-function Color({setColor}){
-
+function Color(){
+    const {setColor} = useContext(AppContext)
     return(
         <div className="flex space-x-1 place-items-center justify-center" >
             <img src={color1} className="w-4 h-4 cursor-pointer" onClick={() => setColor("#0db9e9")}/>

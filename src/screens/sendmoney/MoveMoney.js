@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import '../../App.css';
@@ -8,6 +8,8 @@ import keypad from '../../assets/keypad.png'
 import { useNavigate } from 'react-router-dom';
 import Color from "../../components/Color";
 import arrow_down  from '../../assets/arrow-down.png'
+import { AppContext } from "../../App";
+
 
 function MoveMoney(){
 
@@ -15,7 +17,7 @@ function MoveMoney(){
 
       const [toggle, setToggle] = useState(false);
       const toggleButton = () => setToggle(!toggle);
-      const [color, setColor] = useState("")
+      const {color} = useContext(AppContext)
 
     return(
         <div className="w-full flex justify-center">
@@ -94,7 +96,7 @@ function MoveMoney(){
                     CUSTOMIZE
             </p>
 
-           <Color setColor={setColor}/>
+           <Color/>
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">

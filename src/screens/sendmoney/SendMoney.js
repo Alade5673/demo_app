@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import '../../App.css';
@@ -8,12 +8,13 @@ import tool from '../../assets/tool-tip.png'
 import { useNavigate } from 'react-router-dom';
 import Color from "../../components/Color";
 import arrow_down  from '../../assets/arrow-down.png'
+import { AppContext } from "../../App";
 
 function SendMoney(){
 
   const [toggle, setToggle] = useState(false);
   const toggleButton = () => setToggle(!toggle);
-  const [color, setColor] = useState("")
+  const {color} = useContext(AppContext)
 
    const navigate = useNavigate();
 
@@ -95,7 +96,7 @@ function SendMoney(){
                     CUSTOMIZE
             </p>
 
-           <Color setColor={setColor}/>
+           <Color/>
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">
@@ -123,7 +124,7 @@ function SendMoney(){
                   Account balance : $6,790
               </p>
 
-              <p className="amount">
+              <p className="amount" style={{color: `${color ? color : "#C5C5C5"}`}}>
                   $127.34
               </p>
 
@@ -132,7 +133,7 @@ function SendMoney(){
                     width="230px"
                     height="40px"
                     text="To Friends"
-                    color="#000000"
+                    color="#FFFFFF"
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
@@ -144,7 +145,7 @@ function SendMoney(){
                     width="230px"
                     height="40px"
                     text="To Bank"
-                    color="#000000"
+                    color="#FFFFFF"
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"

@@ -12,13 +12,17 @@ import Fund from './screens/topup/Fund';
 import Card from './screens/topup/Card';
 import CardNext from './screens/topup/CardNext';
 import TopSuccess from './screens/topup/TopSuccess';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
+
+export const AppContext = createContext({color: null, setColor: null})
 
 function App() {
   const [visibility, setVisibility] = useState('fixed') 
+  const [color, setColor] = useState(null)
   
 
   return (
+    <AppContext.Provider value={{color, setColor}}>
     <Router>
       <div className="App bg-cover fixed w-full -z-20 h-screen" onClick={(e) => e.stopPropagation()}>
         <div className={`${visibility}
@@ -46,6 +50,7 @@ function App() {
           </div> */}
       </div>
     </Router>
+  </AppContext.Provider>
 
   );
 }
