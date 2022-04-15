@@ -13,22 +13,21 @@ function SendMoney(){
 
   const [toggle, setToggle] = useState(false);
   const toggleButton = () => setToggle(!toggle);
-  const [color, setColor] = useState("")
 
    const navigate = useNavigate();
 
     return(
-        <div className="flex -mt-60 bg-[#E5E5E533]">
+        <div className="w-full flex justify-center">
 
-         <div className="w-7/12">
-           <div className="ml-40 mt-48">
+         <div className="w-5/12 ">
+           <div className="mt-24 mx-48">
            <Steps
               width="200px"
               height="160px"
               borderRadius="8px"
               backgroundColor="#202020"
               text={
-                <div className="pt-5 pl-3 items-start">
+                <div className="pt-5 pl-3 items-center">
                   <p className="font-bold text-left text-lg pl-1">
                     Send Money
                   </p>
@@ -58,7 +57,7 @@ function SendMoney(){
         </Steps>
          </div>
 
-        {toggle == true ? <div className="ml-60 mt-16">
+        {toggle == true ? <div className="absolute bottom-20 ml-44">
            <Steps
               width="300px"
               height="200px"
@@ -89,13 +88,13 @@ function SendMoney(){
  
          </div> : null }
 
-        <div className="flex ml-40 -mt-20 absolute bottom-8 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex ml-40 justify-right items-right absolute bottom-3 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
 
           <p className="customize">
                     CUSTOMIZE
             </p>
 
-           <Color setColor={setColor}/>
+           <Color/>
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">
@@ -110,24 +109,24 @@ function SendMoney(){
 
          <div className="w-5/12 flex">
            
-           <div className="bg-[#ffffff] -ml-44 p-10 mt-20 w-[300px] h-[600px] relative">
-              <div className="flex space-x-16 -mt-5">
-                <img src={arrow} className="h-[15px]"/>
+           <div className="bg-[#ffffff] pt-5 mt-20 h-[500px] w-[260px] relative flex flex-col justify-right items-right rounded-md">
+              <div className="flex space-x-16 pl-5">
+                <img src={arrow} className="h-[13px]"/>
 
                 <p className="move">
                     Move Money
                   </p>
               </div>
 
-              <p className="bal" style={{color: `${color ? color : "#C5C5C5"}`}}>
+              <p className="bal">
                   Account balance : $6,790
               </p>
 
-              <p className="amount" style={{color: `${color ? color : "#C5C5C5"}`}}>
+              <p className="amount">
                   $127.34
               </p>
 
-              <div className="flex space-x-3 ml-[130px] mt-16" onClick={() => {navigate('/send')}}>
+              <div className="flex space-x-3 mt-16 mx-1" onClick={() => {navigate('/send')}}>
                   <Button
                     width="230px"
                     height="40px"
@@ -136,7 +135,7 @@ function SendMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={color ? color : "#989898"}
+                    backgroundColor={"#989898"}
 
                 />
 
@@ -148,16 +147,16 @@ function SendMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={color ? color : "#989898"}
+                    backgroundColor={"#989898"}
 
                 />
               </div>
-               <div className="-ml-5">
-                <img src={keypad} />
+               <div className="rounded-md">
+                <img src={keypad} className="h-[195px] w-[270px] rounded-md"/>
               </div>
 
            </div>
-           <div className="hint ml-4 pl-10 pr-40 mt-[430px] ">
+           <div className="hint ml-4 pl-10 pr-40 mt-[350px] ">
              <Steps
               width="100px"
               height="70px"

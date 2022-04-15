@@ -15,12 +15,11 @@ function MoveMoney(){
 
       const [toggle, setToggle] = useState(false);
       const toggleButton = () => setToggle(!toggle);
-      const [color, setColor] = useState("")
 
     return(
         <div className="w-full flex justify-center">
-         <div className="w-6/12">
-           <div className="mt-24">
+         <div className="w-5/12">
+           <div className="mt-24 mx-16">
            <Steps
               width="200px"
               height="160px"
@@ -57,7 +56,7 @@ function MoveMoney(){
         </Steps>
          </div>
 
-        {toggle == true ? <div className="ml-60 mt-16">
+        {toggle == true ? <div className="absolute bottom-20 ml-44">
            <Steps
               width="300px"
               height="200px"
@@ -88,13 +87,13 @@ function MoveMoney(){
  
          </div> : null }
 
-        <div className="flex ml-40 -mt-20 absolute bottom-20 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex ml-40 justify-right items-right absolute bottom-3 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
 
           <p className="customize">
                     CUSTOMIZE
             </p>
 
-           <Color setColor={setColor} />
+           <Color/>
 
             <div className="flex space-x-2" onClick={toggleButton}>
               <p className="customize">
@@ -107,8 +106,8 @@ function MoveMoney(){
         
          </div>
            
-           <div className="bg-[#ffffff] p-5 mt-20 -ml-10 h-[530px] w-[270px] relative flex flex-col justify-right items-right rounded-md">
-              <div className="flex space-x-16">
+           <div className="bg-[#ffffff] pt-5 mt-20 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md">
+              <div className="flex space-x-16 pl-5">
                 <img src={arrow} className="h-[13px]"/>
 
                 <p className="move">
@@ -116,15 +115,15 @@ function MoveMoney(){
                   </p>
               </div>
 
-              <p className="bal" style={{color: `${color ? color : "#C5C5C5"}`}}>
+              <p className="bal">
                   Account balance : $6,790
               </p>
 
-              <p className="zero" style={{color: `${color ? color : "#E0E0E0"}`}} onClick={() => {navigate('/send-money')}}>
+              <p className="zero" onClick={() => {navigate('/send-money')}}>
                   $0
               </p>
 
-              <div className="flex space-x-3 mt-16">
+              <div className="flex space-x-3 mt-16 mx-1">
                   <Button
                     width="230px"
                     height="40px"
@@ -133,7 +132,7 @@ function MoveMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={color ? color : "#E8E8E8"}
+                    backgroundColor={"#E8E8E8"}
 
                 />
 
@@ -145,13 +144,13 @@ function MoveMoney(){
                     fontSize='12px'
                     fontWeight="normal"
                     borderRadius="8px"
-                    backgroundColor={color ? color : "#E8E8E8"}
+                    backgroundColor={"#E8E8E8"}
 
                 />
               </div>
             
-              <div className="">
-                <img src={keypad} />
+              <div className="rounded-md">
+                <img src={keypad} className="h-[195px] w-[270px] rounded-md"/>
               </div>
 
            </div>

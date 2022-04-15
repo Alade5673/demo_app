@@ -18,10 +18,10 @@ function Send(){
     const navigate = useNavigate();
 
     return(
-        <div className="flex -mt-72 bg-[#E5E5E533] pb-10">
+        <div className="w-full flex justify-center">
 
-         <div className="w-5/12">
-           <div className="ml-40 mt-48">
+         <div className="w-5/12 flex justify-left mx-48">
+           <div className="mt-24 mx-28">
            <Steps
               width="220px"
               height="220px"
@@ -54,7 +54,7 @@ function Send(){
         </Steps>
          </div>
 
-        {toggle == true ? <div className="ml-60 mt-12">
+        {toggle == true ? <div className="absolute bottom-20 ml-44">
            <Steps
               width="300px"
               height="200px"
@@ -85,7 +85,7 @@ function Send(){
  
          </div> : null }
 
-        <div className="flex ml-40 -mt-20 absolute bottom-8 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex ml-40 absolute bottom-3 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
 
           <p className="customize">
                     CUSTOMIZE
@@ -104,9 +104,9 @@ function Send(){
 
          </div>
 
-         <div className="w-4/12 flex ml-10">
+         <div className="w-7/12 -ml-20 flex rounded-md">
 
-             <img src={addValue} className="w-[510px] h-[600px] mt-32" onClick={() => {navigate('/send-next')}}/>
+             <img src={addValue} className="w-[260px] h-[500px] mt-24 rounded-md" onClick={() => {navigate('/send-next')}}/>
            
            {/* <div className="bg-[#ffffff] p-10 mt-20">
               <div className="flex space-x-20">
@@ -160,7 +160,7 @@ function Send(){
                <img src={keypad}/>
 
            </div> */}
-           <div className="hint ml-4 pl-10 pr-40 mt-[195px]">
+           <div className="hint ml-4 pl-10 pr-40 mt-[150px]">
              <Steps
               width="120px"
               height="70px"

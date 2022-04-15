@@ -22,8 +22,8 @@ function App() {
     <Router>
       <div className="App bg-cover fixed w-full -z-20 h-screen" onClick={(e) => e.stopPropagation()}>
         <div className={`${visibility}
-        w-[80%] h-[80%]  -z-10 top-[10%] left-[10%] mx-auto bg-gradient-to-r from-violet-500 to-fuchsia-500`} onClick={(e) => e.stopPropagation()} ></div>
-        <div onClick={(e) => e.stopPropagation()} className='w-full h-full relative z-20' style={{ backgroundColor: "rgba(0,0,0,0.7)" }} >
+        w-[80%] h-[80%]  -z-10 top-[10%] left-[10%] mx-auto bg-[#0DB9E9]`} onClick={(e) => e.stopPropagation()} ></div>
+        <div onClick={(e) => e.stopPropagation()} className='w-full h-full relative z-20' style={{ backgroundColor: "rgba(0,0,0,0.3)" }} >
           <Routes>
             <Route exact path='/' element={<Home setVisibility={setVisibility} />} />
             <Route path='/move-money' element={<MoveMoney />} />
@@ -51,3 +51,4 @@ function App() {
 }
 
 export default App;
+
