@@ -1,63 +1,65 @@
-import React, { useEffect, useState } from "react";
-import '../App.css';
-import Button from '../components/Button';
-import test from '../assets/empty.png'
-import colored_radio from '../assets/colored_radio.png'
-import uncolored_radio from '../assets/uncolored_radio.png'
-import Option from '../components/Option';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from "react"
+import "../App.css"
+import Button from "../components/Button"
+import test from "../assets/empty.png"
+import colored_radio from "../assets/colored_radio.png"
+import uncolored_radio from "../assets/uncolored_radio.png"
+import Option from "../components/Option"
+import { useNavigate, useLocation } from "react-router-dom"
 import Steps from "../components/Steps"
+import { Fade, Slide } from "react-awesome-reveal"
 
 function Home({ setVisibility }) {
-  let location = useLocation();
+  let location = useLocation()
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   useEffect(() => {
-    
-      setVisibility('hidden')
-    
+    setVisibility("hidden")
+
     return () => {
-      setVisibility('fixed')
+      setVisibility("fixed")
     }
   }, [location, setVisibility])
-  
- 
-  console.log(location);
 
-  const [toggle, setToggle] = useState(true);
-  const toggleButton = () => setToggle(!toggle);
+  const [toggle, setToggle] = useState(true)
+  const toggleButton = () => setToggle(!toggle)
 
-  const [option, setOption] = useState("Send Money");
+  const [option, setOption] = useState("Send Money")
 
-  const noop = () => { navigate('/send-money') };
+  const noop = () => {
+    navigate("/send-money")
+  }
 
   return (
-    <div >
-      <div className="w-full flex justify-center">
-        <div className='w-6/12 flex items-center'>
-          <div className="w-[80%] flex flex-col justify-center items-center text-center h-[80%] my-auto rounded-lg bg-white mx-auto">
-            <p className="text-3xl font-bold">
-              Get Started with Money App
-            </p>
+    <div className="bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-sm">
+      <div className="w-full flex justify-between lg:justify-center pt-[55px] items-start">
+        <Slide duration={2000}>
+          <Fade duration={2000}>
+            <div className="flex flex-col justify-center items-center text-center py-10 rounded-lg bg-white ml-[20px] mr-[60px] lg:ml-[auto] shadow-lg w-[400px] h-[500px] lg:w-[480px] lg:h-[580px]">
+              <p className="text-xl lg:text-3xl font-bold">
+                Get Started with Money App
+              </p>
 
-            <p className="text-sm font-normal mt-4 mx-20">
-              Take a tour and see how we have made various financials activities smooth and faster.
-            </p>
+              <p className="text-xs lg:text-sm font-normal mx-12 mt-5">
+                Take a tour and see how we have made various financials
+                activities smooth and faster.
+              </p>
 
-            <hr className='mt-8'
-              style={{
-                color: '#000000',
-                backgroundColor: '#000000',
-                height: 2,
-                width: 60,
-              }}
-            />
+              <hr
+                className="mt-8"
+                style={{
+                  color: "#000000",
+                  backgroundColor: "#000000",
+                  height: 2,
+                  width: 60,
+                }}
+              />
 
-            <p className="text-sm font-normal mt-5 text-left">
-              View demo as an:
-            </p>
+              <p className="text-sm font-normal mt-5 text-left">
+                View demo as an:
+              </p>
 
-            {/* <div
+              {/* <div
             className="radio-btn border-2 border-[#E5E5E5]"
             onClick={() => {
               setOption("Send Money");
@@ -88,25 +90,28 @@ function Home({ setVisibility }) {
           Top Up
         </div> */}
 
-            <div className="flex mt-10 place-items--center">
-
-              {/* <div className={[toggle ? "border border-sky-500" : "border-2 border-[#E5E5E5]"]} onClick={toggleButton} > */}
-              <div className="border border-sky-500 items-center" onClick={toggleButton} >
-                <Option
-                  width="170px"
-                  height="100px"
-                  text="Account Holder"
-                  color="#0DB9E9"
-                  // color={toggle ? "#0DB9E9" : "#000000"}
-                  fontSize='18px'
-                  fontWeight="normal"
-                  img={<img className="w-5 h-5 mt-1" src={colored_radio} />}
-                  // img={toggle ? <img className="w-5 h-5" src={colored_radio} /> : <img className="w-5 h-5" src={uncolored_radio} />}
-                  onClick={noop}
-
-                />
-              </div>
-              {/* <div className="mr-3"/>
+              <div className="flex mt-10 place-items-center">
+                {/* <div className={[toggle ? "border border-sky-500" : "border-2 border-[#E5E5E5]"]} onClick={toggleButton} > */}
+                <div
+                  className="border border-sky-500 items-center"
+                  onClick={toggleButton}
+                >
+                  <Option
+                    width="170px"
+                    height="80px"
+                    text="Account Holder"
+                    color="#0DB9E9"
+                    // color={toggle ? "#0DB9E9" : "#000000"}
+                    fontSize="18px"
+                    fontWeight="normal"
+                    img={
+                      <img className="w-5 h-5 mt-[2px]" src={colored_radio} />
+                    }
+                    // img={toggle ? <img className="w-5 h-5" src={colored_radio} /> : <img className="w-5 h-5" src={uncolored_radio} />}
+                    onClick={noop}
+                  />
+                </div>
+                {/* <div className="mr-3"/>
 
         <div className={[toggle ? "border-2 border-[#E5E5E5]" : "border-2 border-[#0DB9E9]"]} onClick={toggleButton} >
             <Option
@@ -124,37 +129,40 @@ function Home({ setVisibility }) {
             
             />
           </div> */}
+              </div>
+
+              {/* <div onClick={() => {toggle == true ? navigate('/move-money'): navigate('/top-up')}} className="pl-5"> */}
+              <div
+                onClick={() => navigate("/move-money")}
+                className="mt-10 mx-auto"
+              >
+                <Button
+                  width="280px"
+                  height="50px"
+                  text="Launch Demo"
+                  color="#FFFFFF"
+                  fontSize="18px"
+                  fontWeight="normal"
+                  borderRadius="8px"
+                  backgroundColor={"#0DB9E9"}
+                />
+              </div>
             </div>
+          </Fade>
+        </Slide>
 
-            {/* <div onClick={() => {toggle == true ? navigate('/move-money'): navigate('/top-up')}} className="pl-5"> */}
-            <div onClick={() => navigate('/move-money')} className="mt-10 mx-auto">
-              <Button
-                width="300px"
-                height="50px"
-                text="Launch Demo"
-                color="#FFFFFF"
-                fontSize='18px'
-                fontWeight="normal"
-                borderRadius="8px"
-                backgroundColor={"#0DB9E9"}
-
-              />
-
-            </div>
-
+        <Fade delay={600} duration={2000}>
+          <div className="w-[270px] h-[500px] lg:w-[300px] lg:h-[580px] mr-[20px] lg:mr-[auto] lg:ml-[60px]">
+            <img
+              src={test}
+              className="rounded-lg"
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
-        </div>
-
-        <div className='w-6/12 flex flex-col justify-center items-center rounded-md'>
-          <img src={test} className="h-[700px] p-[65px] rounded-md" />
-        </div>
-
-        <div>
-
-        </div>
+        </Fade>
       </div>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
