@@ -18,11 +18,11 @@ function Send() {
   const navigate = useNavigate()
 
   return (
-    <div className="w-full flex lg:justify-center justify-between">
-      <div className="flex justify-left mr-[10%]">
+    <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
+      <div className="flex justify-left mr-[10%] lg:ml-[10%]">
         <Fade duration={2000}>
           <Slide duration={2000}>
-            <div className="mt-[64px] lg:mr-16 lg:ml-20 ml-5">
+            <div className="mt-[64px] lg:mr-16 lg:ml-16 ml-5">
               <Steps
                 width="220px"
                 height="220px"
@@ -106,7 +106,7 @@ function Send() {
         </div>
       </div>
 
-      <div className="flex rounded-md lg:mr-[auto] mr-2">
+      <div className="flex rounded-md lg:mr-0 mr-2 lg:ml-14">
         <Fade duration={1000} delay={500}>
           <div className="lg:w-[280px] w-[250px] h-[530px] mt-10 mb-7">
             <img

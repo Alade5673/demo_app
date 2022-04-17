@@ -17,7 +17,7 @@ function Success() {
 
   const navigate = useNavigate()
   return (
-    <div className="w-full flex lg:justify-center justify-between">
+    <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
       <div className="flex justify-left mr-[10%]">
         <Fade duration={2000}>
           <Slide duration={2000}>
@@ -106,7 +106,7 @@ function Success() {
       </div>
 
       <Fade duration={1000} delay={500}>
-        <div className="lg:w-[280px] w-[250px] h-[530px] mt-10 mb-7 rounded-md lg:mr-[auto] mr-5">
+        <div className="lg:w-[280px] w-[250px] h-[530px] mt-10 mb-7 rounded-md lg:mr-0 lg:ml-14 mr-5">
           <img
             src={snt}
             className="rounded-md"

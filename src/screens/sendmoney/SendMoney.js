@@ -19,7 +19,7 @@ function SendMoney() {
   const navigate = useNavigate()
 
   return (
-    <div className="w-full flex lg:justify-center justify-between">
+    <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
       <div className="mr-[10%] lg:ml-[10%]">
         <Fade duration={2000}>
           <Slide duration={2000}>
@@ -110,7 +110,7 @@ function SendMoney() {
         </div>
       </div>
 
-      <div className="flex lg:mr-[auto] mr-4">
+      <div className="flex lg:mr-0 mr-4 lg:ml-14">
         <Fade duration={1000} delay={500}>
           <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[500px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
             <div className="flex space-x-16 pl-5">

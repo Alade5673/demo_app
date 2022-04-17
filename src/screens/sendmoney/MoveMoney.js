@@ -19,7 +19,7 @@ function MoveMoney() {
   const { color } = useContext(AppContext)
 
   return (
-    <div className="w-full flex lg:justify-center justify-between">
+    <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
       <div className="mr-[10%]">
         <Fade duration={2000}>
           <Slide duration={2000}>
@@ -69,7 +69,7 @@ function MoveMoney() {
         </Fade>
 
         {toggle == true ? (
-          <div className="absolute bottom-20 ml-16">
+          <div className="absolute bottom-20 lg:ml-16 ml-5">
             <Steps
               width="300px"
               height="200px"
@@ -94,7 +94,7 @@ function MoveMoney() {
           </div>
         ) : null}
 
-        <div className="flex ml-16 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
           <Slide>
             <p className="customize">CUSTOMIZE</p>
 
@@ -110,7 +110,7 @@ function MoveMoney() {
       </div>
 
       <Fade duration={1000} delay={500}>
-        <div className="bg-[#ffffff] pt-5 mt-10 lg:mr-[auto] mr-[30px] mb-7 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
+        <div className="bg-[#ffffff] pt-5 mt-10 lg:mr-0 lg:ml-14 mr-[30px] mb-7 h-[500px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
           <div className="flex space-x-16 pl-5">
             <img src={arrow} className="h-[13px]" />
 

@@ -17,11 +17,11 @@ function SendNext() {
 
   const navigate = useNavigate()
   return (
-    <div className="w-full flex lg:justify-center justify-between">
+    <div className="w-full flex lg:w-[80%] lg:mx-auto lg:justify-center justify-between">
       <div className="flex justify-left mr-[10%]">
         <Fade duration={2000}>
           <Slide duration={2000}>
-            <div className="mt-[64px] lg:mr-16 lg:ml-20 ml-5">
+            <div className="mt-[64px] lg:mr-16 lg:ml-16 ml-5">
               <Steps
                 width="260px"
                 height="220px"
@@ -106,7 +106,7 @@ function SendNext() {
       </div>
 
       <Fade duration={1000} delay={500}>
-        <div className="w-[280px] h-[530px] mt-10 mb-7 rounded-md lg:mr-[auto] mr-8">
+        <div className="w-[280px] h-[530px] mt-10 mb-7 rounded-md lg:mr-0 mr-8 lg:ml-14">
           <img
             src={sendNext}
             className="rounded-md"

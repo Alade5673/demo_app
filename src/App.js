@@ -27,7 +27,7 @@ function App() {
       <div className="App bg-cover fixed w-full -z-20 h-screen" onClick={(e) => e.stopPropagation()}>
         <div className={`${visibility}
         w-full h-full  -z-10 top-[10%] left-[0] right-0  bg-[rgba(255, 255, 255, 0.6)] backdrop-blur-md`} onClick={(e) => e.stopPropagation()} ></div>
-        <div onClick={(e) => e.stopPropagation()} className='w-full h-full relative z-20' style={{ backgroundColor: "rgba(0,0,0,0.3)" }} >
+        <div onClick={(e) => e.stopPropagation()} className='w-full h-full relative z-20' style={{ backgroundColor: "rgba(115, 121, 127, 0.4)" }} >
           <Routes>
             <Route exact path='/' element={<Home setVisibility={setVisibility} />} />
             <Route path='/move-money' element={<MoveMoney />} />
