@@ -31,7 +31,7 @@ function Home({ setVisibility }) {
   }
 
   return (
-    <div className="bg-[rgba(255, 255, 255, 0.6)] backdrop-blur-md">
+    <div className="bg-[rgba(115, 121, 127, 0.6)] backdrop-blur-md">
       <div className="w-full flex justify-between lg:justify-center pt-[55px] items-start">
         <Slide duration={2000}>
           <Fade duration={2000}>
