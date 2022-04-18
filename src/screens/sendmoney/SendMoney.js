@@ -116,7 +116,7 @@ function SendMoney() {
 
       <div className="flex lg:mr-0 mr-4 lg:ml-14">
         <Fade duration={1000} delay={500}>
-          <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[500px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
+          <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[530px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
             <div className="flex space-x-16 pl-5">
               <img src={arrow} className="h-[13px]" />
 
@@ -168,7 +168,7 @@ function SendMoney() {
               /> */}
             </div>
             <div className="rounded-md">
-              <img src={keypad} className="h-[195px] w-[270px] rounded-md" />
+              <img src={keypad} className="h-[210px] w-[270px] rounded-md" style={{paddingRight: "0px"}}/>
             </div>
           </div>
         </Fade>

@@ -114,7 +114,7 @@ function MoveMoney() {
       </div>
 
       <Fade duration={1000} delay={500}>
-        <div className="bg-[#ffffff] pt-5 mt-10 lg:mr-0 lg:ml-14 mr-[30px] mb-7 h-[500px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
+        <div className="bg-[#ffffff] pt-5 mt-10 lg:mr-0 lg:ml-14 mr-[30px] mb-7 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
           <div className="flex space-x-16 pl-5">
             <img src={arrow} className="h-[13px]" />
 
@@ -165,7 +165,7 @@ function MoveMoney() {
           </div>
 
           <div className="rounded-md">
-            <img src={keypad} className="h-[195px] w-[270px] rounded-md" />
+            <img src={keypad} className="h-[195px] w-[270px] rounded-md"  style={{paddingRight: "0px"}}/>
           </div>
         </div>
       </Fade>
