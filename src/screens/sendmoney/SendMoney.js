@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import Button from "../../components/Button"
+// import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
 import arrow from "../../assets/arrow.png"
@@ -10,6 +10,7 @@ import Color from "../../components/Color"
 import arrow_down from "../../assets/arrow-down.png"
 import { AppContext } from "../../App"
 import { Bounce, Fade, Slide } from "react-awesome-reveal"
+import { Button } from '@deposits/ui-kit-react'
 
 function SendMoney() {
   const [toggle, setToggle] = useState(false)
@@ -42,8 +43,11 @@ function SendMoney() {
                     Next
                   </button> */}
 
-                    <div className="flex space-x-6 mr-3 mt-1">
-                      <button
+                    <div className="flex space-x-6 mr-3 mt-4">
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/move-money')}}> Back</Button>
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send")}}> Next</Button>
+                      {/* <button
                         className="p-1 w-20 mt-4 border-[1px] text-sm border-[#FFFFFF] ml-1"
                         onClick={() => {
                           navigate("/move-money")
@@ -59,7 +63,7 @@ function SendMoney() {
                         }}
                       >
                         Next
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 }
@@ -112,7 +116,7 @@ function SendMoney() {
 
       <div className="flex lg:mr-0 mr-4 lg:ml-14">
         <Fade duration={1000} delay={500}>
-          <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[500px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
+          <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[530px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
             <div className="flex space-x-16 pl-5">
               <img src={arrow} className="h-[13px]" />
 
@@ -135,12 +139,13 @@ function SendMoney() {
 
             <div
               className="flex space-x-3 mt-16 mx-1"
-              style={{ color: `${color ? color : "#C5C5C5"}` }}
-              onClick={() => {
-                navigate("/send")
-              }}
-            >
-              <Button
+              style={{ color: `${color ? color : "#C5C5C5"}` }} >
+
+              <Button  style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " > To Friends</Button>
+
+              <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " > To Bank</Button>
+              
+              {/* <Button
                 width="230px"
                 height="40px"
                 text="To Friends"
@@ -160,10 +165,10 @@ function SendMoney() {
                 fontWeight="normal"
                 borderRadius="8px"
                 backgroundColor={color ? color : "#989898"}
-              />
+              /> */}
             </div>
             <div className="rounded-md">
-              <img src={keypad} className="h-[195px] w-[270px] rounded-md" />
+              <img src={keypad} className="h-[210px] w-[270px] rounded-md" style={{paddingRight: "0px"}}/>
             </div>
           </div>
         </Fade>

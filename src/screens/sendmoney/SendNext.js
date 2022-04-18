@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Button from "../../components/Button"
+// import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
 import arrow from "../../assets/arrow.png"
@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom"
 import Color from "../../components/Color"
 import arrow_down from "../../assets/arrow-down.png"
 import { Fade, Slide } from "react-awesome-reveal"
+import { Button } from '@deposits/ui-kit-react'
 
 function SendNext() {
   const [toggle, setToggle] = useState(false)
@@ -37,8 +38,12 @@ function SendNext() {
                       theme to suit your taste.
                     </p>
 
-                    <div className="flex space-x-6 mr-3 mt-2">
-                      <button
+                    <div className="flex space-x-6 mr-3 mt-6">
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/send')}}> Back</Button>
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/success")}}> Next</Button>
+                      {/* <button
                         className="p-1 w-20 mt-4 border-[1px] border-[#FFFFFF] ml-1 text-sm"
                         onClick={() => {
                           navigate("/send")
@@ -54,7 +59,7 @@ function SendNext() {
                         }}
                       >
                         Next
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 }
