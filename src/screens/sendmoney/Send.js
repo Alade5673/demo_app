@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Button from "../../components/Button"
+// import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
 import arrow from "../../assets/arrow.png"
@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom"
 import Color from "../../components/Color"
 import arrow_down from "../../assets/arrow-down.png"
 import { Fade, Slide, Bounce } from "react-awesome-reveal"
+import { Button } from '@deposits/ui-kit-react'
 
 function Send() {
   const [toggle, setToggle] = useState(false)
@@ -38,8 +39,12 @@ function Send() {
                       bank detail consistently.
                     </p>
 
-                    <div className="flex space-x-6 mr-3">
-                      <button
+                    <div className="flex space-x-6 mr-3 mt-2">
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/send-money')}}> Back</Button>
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-next")}}> Next</Button>
+                      {/* <button
                         className="p-1 w-20 mt-4 border-[1px] border-[#FFFFFF] text-sm"
                         onClick={() => {
                           navigate("/send-money")
@@ -55,7 +60,7 @@ function Send() {
                         }}
                       >
                         Next
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 }

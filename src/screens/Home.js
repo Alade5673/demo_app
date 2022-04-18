@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../App.css"
-import Button from "../components/Button"
+// import Button from "../components/Button"
 import test from "../assets/empty.png"
 import colored_radio from "../assets/colored_radio.png"
 import uncolored_radio from "../assets/uncolored_radio.png"
@@ -8,8 +8,11 @@ import Option from "../components/Option"
 import { useNavigate, useLocation } from "react-router-dom"
 import Steps from "../components/Steps"
 import { Fade, Slide } from "react-awesome-reveal"
+import { Button } from '@deposits/ui-kit-react'
+import Radio from "@deposits/ui-kit-react/dist/components/radio"
 
 function Home({ setVisibility }) {
+  
   let location = useLocation()
 
   const navigate = useNavigate()
@@ -91,12 +94,15 @@ function Home({ setVisibility }) {
         </div> */}
 
               <div className="flex mt-10 place-items-center">
+
                 {/* <div className={[toggle ? "border border-sky-500" : "border-2 border-[#E5E5E5]"]} onClick={toggleButton} > */}
                 <div
                   className="border border-sky-500 items-center"
                   onClick={toggleButton}
                 >
-                  <Option
+
+                  <Radio label="Account Holder" className="p-10" style={{ color: toggle ? "#0DB9E9" : "#000000"}}/>
+                  {/* <Option
                     width="170px"
                     height="80px"
                     text="Account Holder"
@@ -109,7 +115,7 @@ function Home({ setVisibility }) {
                     }
                     // img={toggle ? <img className="w-5 h-5" src={colored_radio} /> : <img className="w-5 h-5" src={uncolored_radio} />}
                     onClick={noop}
-                  />
+                  /> */}
                 </div>
                 {/* <div className="mr-3"/>
 
@@ -136,7 +142,8 @@ function Home({ setVisibility }) {
                 onClick={() => navigate("/move-money")}
                 className="mt-10 mx-auto"
               >
-                <Button
+                <Button style={{backgroundColor: "#0DB9E9", color: "#FFFFFF"}} className="w-[280px] h-[50px] text-sm bg-[#0DB9E9] text-white ">Launch Demo</Button>
+                {/* <Button
                   width="280px"
                   height="50px"
                   text="Launch Demo"
@@ -145,7 +152,7 @@ function Home({ setVisibility }) {
                   fontWeight="normal"
                   borderRadius="8px"
                   backgroundColor={"#0DB9E9"}
-                />
+                /> */}
               </div>
             </div>
           </Fade>
