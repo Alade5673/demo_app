@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import Button from "../../components/Button"
+// import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
 import arrow from "../../assets/arrow.png"
@@ -10,6 +10,7 @@ import Color from "../../components/Color"
 import arrow_down from "../../assets/arrow-down.png"
 import { AppContext } from "../../App"
 import { Fade, Slide } from "react-awesome-reveal"
+import { Button } from '@deposits/ui-kit-react'
 
 function MoveMoney() {
   const navigate = useNavigate()
@@ -41,8 +42,11 @@ function MoveMoney() {
                     {/* <button className="p-1 w-40 mt-4 -ml-5 border-2 border-[#FFFFFF] " onClick={() => {navigate('/send')}}>
                     Next
                   </button> */}
-                    <div className="flex space-x-6 mr-3 mt-1">
-                      <button
+                    <div className="flex space-x-6 mr-3 mt-4">
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/')}}> Back</Button>
+
+                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> Next</Button>
+                      {/* <button
                         className="p-1 w-20 mt-4 border-[1px] text-sm border-[#FFFFFF] ml-1"
                         onClick={() => {
                           navigate("/")
@@ -58,7 +62,7 @@ function MoveMoney() {
                         }}
                       >
                         Next
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 }
@@ -132,7 +136,12 @@ function MoveMoney() {
           </p>
 
           <div className="flex space-x-3 mt-16 mx-1">
-            <Button
+
+            <Button  style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> To Friends</Button>
+
+            <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> To Bank</Button>
+
+             {/* <Button
               width="230px"
               height="40px"
               text="To Friends"
@@ -141,9 +150,9 @@ function MoveMoney() {
               fontWeight="normal"
               borderRadius="8px"
               backgroundColor={color ? color : "#E8E8E8"}
-            />
+            /> */}
 
-            <Button
+            {/* <Button
               width="230px"
               height="40px"
               text="To Bank"
@@ -152,7 +161,7 @@ function MoveMoney() {
               fontWeight="normal"
               borderRadius="8px"
               backgroundColor={color ? color : "#E8E8E8"}
-            />
+            /> */}
           </div>
 
           <div className="rounded-md">
