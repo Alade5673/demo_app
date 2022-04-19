@@ -21,10 +21,10 @@ function SendMoney() {
 
   return (
     <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
-      <div className="mr-[10%] lg:ml-[10%]">
-        <Fade duration={2000}>
-          <Slide duration={2000}>
-            <div className="mt-[68px] lg:mr-16 lg:ml-16 ml-5">
+      <div className="mr-[10%] lg:ml-[20%]">
+        <Fade duration={500}>
+          <Slide duration={500}>
+            <div className="mt-[80px] mx-16 lg:mr-16 lg:ml-16 ml-5">
               <Steps
                 width="200px"
                 height="160px"
@@ -99,7 +99,7 @@ function SendMoney() {
           </div>
         ) : null}
 
-        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
           <Slide>
             <p className="customize">CUSTOMIZE</p>
 
@@ -116,7 +116,7 @@ function SendMoney() {
 
       <div className="flex lg:mr-0 mr-4 lg:ml-14">
         <Fade duration={1000} delay={500}>
-          <div className="bg-[#ffffff] pt-5 mt-10 mb-7 h-[530px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
+          <div className="bg-[#ffffff] pt-5 mt-20 -ml-20 mb-7 h-[530px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
             <div className="flex space-x-16 pl-5">
               <img src={arrow} className="h-[13px]" />
 

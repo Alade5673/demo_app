@@ -20,10 +20,10 @@ function Send() {
 
   return (
     <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
-      <div className="flex justify-left mr-[10%] lg:ml-[10%]">
-        <Fade duration={2000}>
-          <Slide duration={2000}>
-            <div className="mt-[64px] lg:mr-16 lg:ml-16 ml-5">
+      <div className="flex justify-left mr-[10%] lg:ml-[20%]">
+        <Fade duration={500}>
+          <Slide duration={500}>
+            <div className="mt-[80px] lg:mr-16 lg:ml-16 ml-5">
               <Steps
                 width="220px"
                 height="220px"
@@ -96,7 +96,7 @@ function Send() {
           </div>
         ) : null}
 
-        <div className="flex lg:ml-16 ml-5 absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex lg:ml-16 ml-5 absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
           <Slide>
             <p className="customize">CUSTOMIZE</p>
 
@@ -112,8 +112,8 @@ function Send() {
       </div>
 
       <div className="flex rounded-md lg:mr-0 mr-2 lg:ml-14">
-        <Fade duration={1000} delay={500}>
-          <div className="lg:w-[280px] w-[250px] h-[530px] mt-10 mb-7">
+        <Fade duration={500} delay={500}>
+          <div className="lg:w-[280px] w-[250px] h-[530px] mt-20 mb-7 -ml-28">
             <img
               src={addValue}
               className="w-full h-full rounded-md"

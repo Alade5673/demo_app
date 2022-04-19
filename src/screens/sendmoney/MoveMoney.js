@@ -22,9 +22,9 @@ function MoveMoney() {
   return (
     <div className="w-full lg:w-[80%] lg:mx-auto flex lg:justify-center justify-between">
       <div className="mr-[10%]">
-        <Fade duration={2000}>
-          <Slide duration={2000}>
-            <div className="mt-[68px] mx-16">
+        <Fade duration={500}>
+          <Slide duration={500}>
+            <div className="mt-[80px] mx-16">
               <Steps
                 width="200px"
                 height="160px"
@@ -98,7 +98,7 @@ function MoveMoney() {
           </div>
         ) : null}
 
-        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[350px] ">
+        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
           <Slide>
             <p className="customize">CUSTOMIZE</p>
 
@@ -113,8 +113,8 @@ function MoveMoney() {
         </div>
       </div>
 
-      <Fade duration={1000} delay={500}>
-        <div className="bg-[#ffffff] pt-5 mt-10 lg:mr-0 lg:ml-14 mr-[30px] mb-7 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
+      <Fade duration={500} delay={500}>
+        <div className="bg-[#ffffff] pt-5 mt-20 -ml-10 mr-[30px] mb-7 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
           <div className="flex space-x-16 pl-5">
             <img src={arrow} className="h-[13px]" />
 

@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         defaultColor: "#0DB9E9",
       },
+      fontFamily:{
+        opensans: ['Open Sans', 'sans-serif']
+      }
     },
   },
   variants: {

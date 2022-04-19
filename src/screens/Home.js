@@ -36,8 +36,8 @@ function Home({ setVisibility }) {
   return (
     <div className="bg-[rgba(115, 121, 127, 0.6)] backdrop-blur-md">
       <div className="w-full flex justify-between lg:justify-center pt-[55px] items-start">
-        <Slide duration={2000}>
-          <Fade duration={2000}>
+        <Slide duration={500}>
+          <Fade duration={500}>
             <div className="flex flex-col justify-center items-center text-center py-10 rounded-lg bg-white ml-[20px] mr-[60px] lg:ml-[auto] shadow-lg w-[400px] h-[500px] lg:w-[480px] lg:h-[580px]">
               <p className="text-xl lg:text-3xl font-bold">
                 Get Started with Money App
@@ -97,7 +97,7 @@ function Home({ setVisibility }) {
 
                 {/* <div className={[toggle ? "border border-sky-500" : "border-2 border-[#E5E5E5]"]} onClick={toggleButton} > */}
                 <div
-                  className="border border-sky-500 items-center"
+                  className="border border-[#43D2FA] items-center"
                   onClick={toggleButton}
                 >
 
@@ -142,7 +142,7 @@ function Home({ setVisibility }) {
                 onClick={() => navigate("/move-money")}
                 className="mt-10 mx-auto"
               >
-                <Button style={{backgroundColor: "#0DB9E9", color: "#FFFFFF"}} className="w-[280px] h-[50px] text-sm bg-[#0DB9E9] text-white ">Launch Demo</Button>
+                <Button style={{backgroundColor: "#0DB9E9", color: "#FFFFFF"}} className="w-[280px] h-[50px] text-sm bg-[#43D2FA] text-white ">Launch Demo</Button>
                 {/* <Button
                   width="280px"
                   height="50px"
