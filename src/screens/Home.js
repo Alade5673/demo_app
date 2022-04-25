@@ -12,7 +12,7 @@ import { Button } from '@deposits/ui-kit-react'
 import Radio from "@deposits/ui-kit-react/dist/components/radio"
 
 function Home({ setVisibility }) {
-  
+
   let location = useLocation()
 
   const navigate = useNavigate()
@@ -101,7 +101,7 @@ function Home({ setVisibility }) {
                   onClick={toggleButton}
                 >
 
-                  <Radio label="Account Holder" className="p-10" style={{ color: toggle ? "#0DB9E9" : "#000000"}}/>
+                  <Radio label="Account Holder" className="p-10" style={{ color: toggle ? "#0DB9E9" : "#000000" }} />
                   {/* <Option
                     width="170px"
                     height="80px"
@@ -142,7 +142,7 @@ function Home({ setVisibility }) {
                 onClick={() => navigate("/move-money")}
                 className="mt-10 mx-auto"
               >
-                <Button style={{backgroundColor: "#0DB9E9", color: "#FFFFFF"}} className="w-[280px] h-[50px] text-sm bg-[#43D2FA] text-white ">Launch Demo</Button>
+                <Button style={{ backgroundColor: "#0DB9E9", color: "#FFFFFF" }} className="w-[280px] h-[50px] text-sm bg-[#43D2FA] text-white ">Launch Demo</Button>
                 {/* <Button
                   width="280px"
                   height="50px"
@@ -164,6 +164,7 @@ function Home({ setVisibility }) {
               src={test}
               className="rounded-lg"
               style={{ width: "100%", height: "100%" }}
+              alt=''
             />
           </div>
         </Fade>

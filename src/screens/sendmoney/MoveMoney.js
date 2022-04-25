@@ -11,6 +11,7 @@ import arrow_down from "../../assets/arrow-down.png"
 import { AppContext } from "../../App"
 import { Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
+import CustomizeBar from "../../components/CustomizeBar"
 
 function MoveMoney() {
   const navigate = useNavigate()
@@ -43,9 +44,9 @@ function MoveMoney() {
                     Next
                   </button> */}
                     <div className="flex space-x-6 mr-3 mt-4">
-                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/')}}> Back</Button>
+                      <Button style={{ backgroundColor: "#202020", color: "#FFFFFF" }} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate('/') }}> Back</Button>
 
-                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> Next</Button>
+                      <Button style={{ backgroundColor: "#202020", color: "#FFFFFF" }} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate("/send-money") }}> Next</Button>
                       {/* <button
                         className="p-1 w-20 mt-4 border-[1px] text-sm border-[#FFFFFF] ml-1"
                         onClick={() => {
@@ -72,51 +73,14 @@ function MoveMoney() {
           </Slide>
         </Fade>
 
-        {toggle == true ? (
-          <div className="absolute bottom-20 lg:ml-16 ml-5">
-            <Steps
-              width="300px"
-              height="200px"
-              borderRadius="8px"
-              backgroundColor="#202020"
-              text={
-                <div className="pt-5 pl-3 items-start">
-                  <p className="header">CUSTOMIZATIONS AVAILABLE MONEY APP</p>
-                  <ul className="ul">
-                    <li>Logo & Accent colors</li>
-                    <li>Icons</li>
-                    <li>Buttons</li>
-                    <li>Typography</li>
-                    <li>Toggles & Tabs</li>
-                    <li>Custom fields</li>
-                    <li>More…</li>
-                  </ul>
-                </div>
-              }
-              color="#ffffff"
-            ></Steps>
-          </div>
-        ) : null}
+        <CustomizeBar />
 
-        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
-          <Slide>
-            <p className="customize">CUSTOMIZE</p>
-
-            <Color />
-
-            <div className="flex space-x-2" onClick={toggleButton}>
-              <p className="customize">MORE AVAILABLE</p>
-
-              <img src={arrow_down} className="w-3 h-3" />
-            </div>
-          </Slide>
-        </div>
       </div>
 
       <Fade duration={500} delay={500}>
         <div className="bg-[#ffffff] pt-5 mt-20 -ml-10 mr-[30px] mb-7 h-[530px] w-[270px] relative flex flex-col justify-left items-left rounded-md shadow-2xl">
           <div className="flex space-x-16 pl-5">
-            <img src={arrow} className="h-[13px]" />
+            <img src={arrow} className="h-[13px]" alt='' />
 
             <p className="move">Move Money</p>
           </div>
@@ -137,11 +101,11 @@ function MoveMoney() {
 
           <div className="flex space-x-3 mt-16 mx-1">
 
-            <Button  style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> To Friends</Button>
+            <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate("/send-money") }}> To Friends</Button>
 
-            <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send-money")}}> To Bank</Button>
+            <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate("/send-money") }}> To Bank</Button>
 
-             {/* <Button
+            {/* <Button
               width="230px"
               height="40px"
               text="To Friends"
@@ -165,7 +129,7 @@ function MoveMoney() {
           </div>
 
           <div className="rounded-md">
-            <img src={keypad} className="h-[195px] w-[270px] rounded-md"  style={{paddingRight: "0px"}}/>
+            <img src={keypad} alt='' className="h-[195px] w-[270px] rounded-md" style={{ paddingRight: "0px" }} />
           </div>
         </div>
       </Fade>

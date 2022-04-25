@@ -11,6 +11,7 @@ import arrow_down from "../../assets/arrow-down.png"
 import { AppContext } from "../../App"
 import { Bounce, Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
+import CustomizeBar from "../../components/CustomizeBar"
 
 function SendMoney() {
   const [toggle, setToggle] = useState(false)
@@ -44,9 +45,9 @@ function SendMoney() {
                   </button> */}
 
                     <div className="flex space-x-6 mr-3 mt-4">
-                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate('/move-money')}}> Back</Button>
+                      <Button style={{ backgroundColor: "#202020", color: "#FFFFFF" }} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate('/move-money') }}> Back</Button>
 
-                      <Button style={{backgroundColor: "#202020", color: "#FFFFFF"}} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => {navigate("/send")}}> Next</Button>
+                      <Button style={{ backgroundColor: "#202020", color: "#FFFFFF" }} className="w-[250px] h-[40px] text-sm bg-[#0DB9E9] text-white " onClick={() => { navigate("/send") }}> Next</Button>
                       {/* <button
                         className="p-1 w-20 mt-4 border-[1px] text-sm border-[#FFFFFF] ml-1"
                         onClick={() => {
@@ -73,45 +74,8 @@ function SendMoney() {
           </Slide>
         </Fade>
 
-        {toggle == true ? (
-          <div className="absolute bottom-20 lg:ml-16 ml-5">
-            <Steps
-              width="300px"
-              height="200px"
-              borderRadius="8px"
-              backgroundColor="#202020"
-              text={
-                <div className="pt-5 pl-3 items-start">
-                  <p className="header">CUSTOMIZATIONS AVAIABLE MONEY APP</p>
-                  <ul className="ul">
-                    <li>Logo & Accent colors</li>
-                    <li>Icons</li>
-                    <li>Buttons</li>
-                    <li>Typography</li>
-                    <li>Toggles & Tabs</li>
-                    <li>Custom fields</li>
-                    <li>More…</li>
-                  </ul>
-                </div>
-              }
-              color="#ffffff"
-            ></Steps>
-          </div>
-        ) : null}
+        <CustomizeBar />
 
-        <div className="flex lg:ml-16 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
-          <Slide>
-            <p className="customize">CUSTOMIZE</p>
-
-            <Color />
-
-            <div className="flex space-x-2" onClick={toggleButton}>
-              <p className="customize">MORE AVAILABLE</p>
-
-              <img src={arrow_down} className="w-3 h-3" />
-            </div>
-          </Slide>
-        </div>
       </div>
 
       <div className="flex lg:mr-0 mr-4 lg:ml-14">
@@ -141,10 +105,10 @@ function SendMoney() {
               className="flex space-x-3 mt-16 mx-1"
               style={{ color: `${color ? color : "#C5C5C5"}` }} >
 
-              <Button  style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " > To Friends</Button>
+              <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " > To Friends</Button>
 
               <Button style={{ color: `${color ? color : "#E8E8E8"}` }} className="w-[230px] h-[40px] text-sm bg-[#0DB9E9] text-white " > To Bank</Button>
-              
+
               {/* <Button
                 width="230px"
                 height="40px"
@@ -168,7 +132,7 @@ function SendMoney() {
               /> */}
             </div>
             <div className="rounded-md">
-              <img src={keypad} className="h-[210px] w-[270px] rounded-md" style={{paddingRight: "0px"}}/>
+              <img src={keypad} className="h-[210px] w-[270px] rounded-md" style={{ paddingRight: "0px" }} />
             </div>
           </div>
         </Fade>
