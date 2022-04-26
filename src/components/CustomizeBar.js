@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Slide } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 import Color from './Color'
 import Steps from './Steps'
 import arrow_down from "../assets/arrow-down.png"
@@ -36,8 +36,8 @@ const CustomizeBar = () => {
         </div>
       ) : null}
 
-      <div className="flex posi lg:-ml-20 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
-        <Slide>
+      <div className="flex lg:-ml-20 ml-5 justify-right items-right absolute bottom-0 mb-2 bg-[#FFFFFF] space-x-3 p-4 w-[450px] ">
+        <Fade>
           <p className="customize">CUSTOMIZE</p>
 
           <Color />
@@ -47,7 +47,7 @@ const CustomizeBar = () => {
 
             <img src={arrow_down} className="w-3 h-3" alt='' />
           </div>
-        </Slide>
+        </Fade>
       </div>
 
     </>

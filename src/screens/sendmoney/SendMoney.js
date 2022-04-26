@@ -1,21 +1,21 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 // import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
 import arrow from "../../assets/arrow.png"
 import keypad from "../../assets/keypad.png"
-import tool from "../../assets/tool-tip.png"
+// import tool from "../../assets/tool-tip.png"
 import { useNavigate } from "react-router-dom"
-import Color from "../../components/Color"
-import arrow_down from "../../assets/arrow-down.png"
+// import Color from "../../components/Color"
+// import arrow_down from "../../assets/arrow-down.png"
 import { AppContext } from "../../App"
 import { Bounce, Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
 import CustomizeBar from "../../components/CustomizeBar"
 
 function SendMoney() {
-  const [toggle, setToggle] = useState(false)
-  const toggleButton = () => setToggle(!toggle)
+  // const [toggle, setToggle] = useState(false)
+  // const toggleButton = () => setToggle(!toggle)
   const { color } = useContext(AppContext)
 
   const navigate = useNavigate()
@@ -82,7 +82,7 @@ function SendMoney() {
         <Fade duration={1000} delay={500}>
           <div className="bg-[#ffffff] pt-5 mt-20 -ml-20 mb-7 h-[530px] lg:w-[260px] w-[250px] relative flex flex-col justify-right items-right rounded-md">
             <div className="flex space-x-16 pl-5">
-              <img src={arrow} className="h-[13px]" />
+              <img alt='' src={arrow} className="h-[13px]" />
 
               <p className="move">Move Money</p>
             </div>
@@ -132,7 +132,7 @@ function SendMoney() {
               /> */}
             </div>
             <div className="rounded-md">
-              <img src={keypad} className="h-[210px] w-[270px] rounded-md" style={{ paddingRight: "0px" }} />
+              <img alt='' src={keypad} className="h-[210px] w-[270px] rounded-md" style={{ paddingRight: "0px" }} />
             </div>
           </div>
         </Fade>

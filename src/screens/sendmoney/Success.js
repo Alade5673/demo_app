@@ -1,21 +1,21 @@
-import React, { useState } from "react"
+import React from "react"
 // import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
-import arrow from "../../assets/arrow.png"
-import keypad from "../../assets/keypad.png"
+// import arrow from "../../assets/arrow.png"
+// import keypad from "../../assets/keypad.png"
 import snt from "../../assets/snt.png"
-import InputField from "../../components/InputField"
+// import InputField from "../../components/InputField"
 import { useNavigate } from "react-router-dom"
-import Color from "../../components/Color"
-import arrow_down from "../../assets/arrow-down.png"
+// import Color from "../../components/Color"
+// import arrow_down from "../../assets/arrow-down.png"
 import { Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
 import CustomizeBar from "../../components/CustomizeBar"
 
 function Success() {
-  const [toggle, setToggle] = useState(false)
-  const toggleButton = () => setToggle(!toggle)
+  // const [toggle, setToggle] = useState(false)
+  // const toggleButton = () => setToggle(!toggle)
 
   const navigate = useNavigate()
   return (
@@ -77,6 +77,7 @@ function Success() {
       <Fade duration={500} delay={500}>
         <div className="lg:w-[280px] w-[250px] h-[530px] mt-20 mb-7 rounded-md lg:mr-0 mr-5">
           <img
+            alt=''
             src={snt}
             className="rounded-md"
             style={{ width: "100%", height: "100%" }}

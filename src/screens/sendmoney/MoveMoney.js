@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 // import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
@@ -6,18 +6,18 @@ import arrow from "../../assets/arrow.png"
 // import test from '../assets/test.png'
 import keypad from "../../assets/keypad.png"
 import { useNavigate } from "react-router-dom"
-import Color from "../../components/Color"
-import arrow_down from "../../assets/arrow-down.png"
-import { AppContext } from "../../App"
+// import Color from "../../components/Color"
+// import arrow_down from "../../assets/arrow-down.png"
 import { Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
 import CustomizeBar from "../../components/CustomizeBar"
+import { AppContext } from "../../App"
 
 function MoveMoney() {
   const navigate = useNavigate()
 
-  const [toggle, setToggle] = useState(false)
-  const toggleButton = () => setToggle(!toggle)
+  // const [toggle, setToggle] = useState(false)
+  // const toggleButton = () => setToggle(!toggle)
   const { color } = useContext(AppContext)
 
   return (

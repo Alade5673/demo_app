@@ -1,21 +1,21 @@
-import React, { useState } from "react"
+import React from "react"
 // import Button from "../../components/Button"
 import Steps from "../../components/Steps"
 import "../../App.css"
-import arrow from "../../assets/arrow.png"
-import keypad from "../../assets/keypad.png"
+// import arrow from "../../assets/arrow.png"
+// import keypad from "../../assets/keypad.png"
 import addValue from "../../assets/addValue.png"
-import InputField from "../../components/InputField"
+// import InputField from "../../components/InputField"
 import { useNavigate } from "react-router-dom"
-import Color from "../../components/Color"
-import arrow_down from "../../assets/arrow-down.png"
+// import Color from "../../components/Color"
+// import arrow_down from "../../assets/arrow-down.png"
 import { Fade, Slide, Bounce } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
 import CustomizeBar from "../../components/CustomizeBar"
 
 function Send() {
-  const [toggle, setToggle] = useState(false)
-  const toggleButton = () => setToggle(!toggle)
+  // const [toggle, setToggle] = useState(false)
+  // const toggleButton = () => setToggle(!toggle)
 
   const navigate = useNavigate()
 
@@ -79,6 +79,7 @@ function Send() {
           <div className="lg:w-[280px] w-[250px] h-[530px] mt-20 mb-7 -ml-28">
             <img
               src={addValue}
+              alt=''
               className="w-full h-full rounded-md"
               onClick={() => {
                 navigate("/send-next")

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react"
 import "../App.css"
 // import Button from "../components/Button"
 import test from "../assets/empty.png"
-import colored_radio from "../assets/colored_radio.png"
-import uncolored_radio from "../assets/uncolored_radio.png"
-import Option from "../components/Option"
+// import colored_radio from "../assets/colored_radio.png"
+// import uncolored_radio from "../assets/uncolored_radio.png"
+// import Option from "../components/Option"
 import { useNavigate, useLocation } from "react-router-dom"
-import Steps from "../components/Steps"
+// import Steps from "../components/Steps"
 import { Fade, Slide } from "react-awesome-reveal"
 import { Button } from '@deposits/ui-kit-react'
 import Radio from "@deposits/ui-kit-react/dist/components/radio"
@@ -27,11 +27,11 @@ function Home({ setVisibility }) {
   const [toggle, setToggle] = useState(true)
   const toggleButton = () => setToggle(!toggle)
 
-  const [option, setOption] = useState("Send Money")
+  // const [option, setOption] = useState("Send Money")
 
-  const noop = () => {
-    navigate("/send-money")
-  }
+  // const noop = () => {
+  //   navigate("/send-money")
+  // }
 
   return (
     <div className="bg-[rgba(115, 121, 127, 0.6)] backdrop-blur-md">
@@ -101,7 +101,7 @@ function Home({ setVisibility }) {
                   onClick={toggleButton}
                 >
 
-                  <Radio label="Account Holder" className="p-10" style={{ color: toggle ? "#0DB9E9" : "#000000" }} />
+                  <Radio label="Account Holder" className="p-10" defaultChecked style={{ color: toggle ? "#0DB9E9" : "#000000" }} />
                   {/* <Option
                     width="170px"
                     height="80px"
